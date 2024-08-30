@@ -1110,7 +1110,7 @@ header .logo {
     position: relative;
 }
 
-header .logo a {
+/* header .logo a {
     display: block;
     margin: 0;
     padding: 0;
@@ -1118,13 +1118,13 @@ header .logo a {
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
-    width: 200px; /* Updated width */
-    height: 100px; /* Updated height to maintain aspect ratio */
+    width: 200px; /* Updated width 
+    height: 100px; /* Updated height to maintain aspect ratio 
     background: url("../images/logo2.png");
-    background-size: 200px 100px; /* Updated background size */
-    background-repeat: no-repeat; /* Ensures the image does not repeat */
+    background-size: 200px 100px; /* Updated background size 
+    background-repeat: no-repeat; /* Ensures the image does not repeat 
 }
-
+ */
 
 /**
  * menu toggle - (_layout.css)

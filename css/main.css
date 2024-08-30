@@ -1103,25 +1103,28 @@ header .top-bar {
 	top: 0;
 }
 header .logo {
-	float: left;
-	margin-left: 20px;
-	margin-right: 50px;
-	margin-top: 25px;
-	position: relative;
+    float: left;
+    margin-left: 20px;
+    margin-right: 50px;
+    margin-top: 25px;
+    position: relative;
 }
+
 header .logo a {
-	display: block;
-	margin: 0;
-	padding: 0;
-	border: none;
-	font: 0/0 a;
-	text-shadow: none;
-	color: transparent;
-	width: 100px;
-	height: 15px;
-	background: url("../images/logo2.png");
-	background-size: 100px 15px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    width: 200px; /* Updated width */
+    height: 30px; /* Updated height to maintain aspect ratio */
+    background: url("../images/logo2.png");
+    background-size: 200px 30px; /* Updated background size */
+    background-repeat: no-repeat; /* Ensures the image does not repeat */
 }
+
 
 /**
  * menu toggle - (_layout.css)

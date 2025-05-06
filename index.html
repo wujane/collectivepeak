@@ -44,6 +44,11 @@
       align-items: center;
       padding: 1rem;
     }
+    .logo img {
+      max-height: 60px;
+      height: auto;
+      display: block;
+    }
     .nav-links {
       list-style: none;
       display: flex;
@@ -154,7 +159,11 @@
 <body>
   <header>
     <nav>
-      <div class="logo"><a href="#hero">CollectivePeak</a></div>
+      <div class="logo">
+        <a href="#hero">
+          <img src="logo.jpg" alt="CollectivePeak Capital Logo" />
+        </a>
+      </div>
       <ul class="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>

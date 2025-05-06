@@ -1,168 +1,239 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 <head>
-   <meta charset="utf-8">
-   <title>CollectivePeak Capital</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-   <link rel="stylesheet" href="css/base.css">
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">
-   <script src="js/modernizr.js"></script>
-   <style>
-      .section-intro {
-         text-align: center;
-      }
-      .timeline-wrap {
-         display: flex;
-         justify-content: center;
-         flex-wrap: wrap;
-      }
-      .timeline-block {
-         width: 30%;
-         margin: 15px;
-         text-align: center;
-      }
-      .logo {
-         text-align: center;
-         padding: 20px 0;
-      }
-      .logo-img {
-         max-width: 100px; /* Adjust this value as needed */
-         height: auto; /* Maintains aspect ratio */
-         display: block;
-         margin: 0 auto; /* Centers the logo within the container */
-      }
-      @media (max-width: 768px) {
-         .logo-img {
-            max-width: 120px; /* Adjust for smaller screens */
-         }
-      }
-   </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CollectivePeak Capital</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a1a1a;
+      --secondary: #555555;
+      --accent: #0077cc;
+      --light: #f9f9f9;
+    }
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary);
+      line-height: 1.6;
+      background: var(--light);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      font-weight: 600;
+    }
+    .hero {
+      height: 100vh;
+      background: url('images/hero.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #ffffff;
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-family: 'Lora', serif;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    .btn:hover {
+      opacity: 0.9;
+    }
+    section {
+      padding: 6rem 1rem;
+      scroll-margin-top: 80px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--primary);
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .card h3 {
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    .card p {
+      color: var(--secondary);
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.75rem;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      width: 100%;
+      font-family: inherit;
+    }
+    .contact-form button {
+      padding: 0.75rem;
+      background: var(--accent);
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    footer {
+      background: var(--primary);
+      color: #ffffff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+  </style>
 </head>
+<body>
+  <header>
+    <nav>
+      <div class="logo"><a href="#hero">CollectivePeak</a></div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#criteria">Criteria</a></li>
+        <li><a href="#offer">Offer</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<body id="top">
-   <header>
-      <div class="logo">
-         <a href="index.html">
-            <img src="images/logo.png" alt="CollectivePeak Capital Logo" class="logo-img">
-         </a>
-      </div>
-   </header>
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Propelling Your Next Chapter</h1>
+      <p>Investing in Growth. Building Futures Together.</p>
+      <a href="#about" class="btn btn-primary">Learn More</a>
+    </div>
+  </section>
 
-   <section id="intro">
-      <div class="intro-overlay"></div>
-      <div class="intro-content">
-         <div class="row">
-            <div class="col-twelve">
-               <h5>Propelling Your Next Chapter.</h5>
-               <h1>CollectivePeak Capital.</h1>
-               <p class="intro-position">
-                  <span>Investing in Growth</span>
-                  <span>Building Futures Together</span>
-               </p>
-               <a class="button stroke smoothscroll" href="#about" title="">Learn More</a>
-            </div>
-         </div>
-      </div>
-   </section>
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="lead">CollectivePeak Capital is a team of experienced operators and investors dedicated to acquiring and growing small to medium-sized businesses. Our goal is to shepherd a company through its next chapter by leveraging our expertise and passion for sustainable growth. We partner with businesses that have strong fundamentals and a desire to scale, ensuring a smooth and successful transition.</p>
+    </div>
+  </section>
 
-   <section id="about">
-      <div class="row section-intro">
-         <div class="col-twelve">
-            <h5>About Us</h5>
-            <div class="intro-info">
-               <img src="images/team.png" alt="Team">
-               <p class="lead">CollectivePeak Capital is a team of experienced operators and investors dedicated to acquiring and growing small to medium-sized businesses. Our goal is to shepherd a company through its next chapter by leveraging our expertise and passion for sustainable growth. We are committed to partnering with companies that have strong fundamentals and a desire to scale, ensuring a smooth and successful transition.</p>
-            </div>
-         </div>
+  <section id="criteria">
+    <div class="container">
+      <h2 class="section-title">Investment Criteria</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Stable Cash Flow</h3>
+          <p>History of stable cash flow and strong financial fundamentals.</p>
+        </div>
+        <div class="card">
+          <h3>Potential for Growth</h3>
+          <p>Untapped potential through market expansion, operational improvements, or strategic repositioning.</p>
+        </div>
+        <div class="card">
+          <h3>Partnership-Oriented Culture</h3>
+          <p>Strong cultural alignment and mutual desire for long-term success.</p>
+        </div>
       </div>
-   </section>
+    </div>
+  </section>
 
-   <section id="Work" class="grey-section">
-      <div class="row section-intro">
-         <div class="col-twelve">
-            <h2>Investment Criteria</h2>
-         </div>
+  <section id="offer">
+    <div class="container">
+      <h2 class="section-title">What We Offer</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Patient Capital</h3>
+          <p>Time for sustainable growth without short-term exit pressure.</p>
+        </div>
+        <div class="card">
+          <h3>Personalized Experience</h3>
+          <p>Working closely to understand vision and honor legacy.</p>
+        </div>
+        <div class="card">
+          <h3>Vested Interest in Growth</h3>
+          <p>Committed to driving value and success for all stakeholders.</p>
+        </div>
       </div>
-      <div class="row">
-         <div class="col-twelve">
-            <div class="timeline-wrap">
-               <div class="timeline-block">
-                  <div class="timeline-header">
-                     <h3>Stable Cash Flow</h3>
-                     <p>We seek businesses with a history of stable cash flow and strong financial fundamentals.</p>
-                  </div>
-               </div>
-               <div class="timeline-block">
-                  <div class="timeline-header">
-                     <h3>Potential for Growth</h3>
-                     <p>Our ideal acquisition targets are companies with untapped potential for growth, whether through market expansion, operational improvements, or strategic repositioning.</p>
-                  </div>
-               </div>
-               <div class="timeline-block">
-                  <div class="timeline-header">
-                     <h3>Partnership-Oriented Culture</h3>
-                     <p>We prioritize businesses where there is a strong cultural alignment and a mutual desire to achieve a seamless transition and long-term success.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
+    </div>
+  </section>
 
-   <section id="offer" class="grey-section">
-      <div class="row section-intro">
-         <div class="col-twelve">
-            <h2>What We Offer</h2>
-         </div>
-      </div>
-      <div class="row">
-         <div class="col-twelve">
-            <div class="timeline-wrap">
-               <div class="timeline-block">
-                  <div class="timeline-header">
-                     <h3>Patient Capital</h3>
-                     <p>We provide patient capital, allowing businesses the time they need to grow sustainably without the pressure of short-term exits.</p>
-                  </div>
-               </div>
-               <div class="timeline-block">
-                  <div class="timeline-header">
-                     <h3>Personalized Experience</h3>
-                     <p>We offer a personalized approach, working closely with business owners to understand their vision and ensure a seamless transition that honors their legacy.</p>
-                  </div>
-               </div>
-               <div class="timeline-block">
-                  <div class="timeline-header">
-                     <h3>Vested Interest in Growth</h3>
-                     <p>Our team has a vested interest in the growth of the businesses we acquire, working diligently to drive value and success for all stakeholders.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <form class="contact-form" action="https://formspree.io/f/xyz" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-   <section id="contact">
-      <div class="row section-intro">
-         <div class="col-twelve">
-            <h5>Contact</h5>
-            <h1>Get in Touch with Us</h1>
-         </div>
-      </div>
-      <div class="row contact-form">
-         <div class="col-twelve">
-            <form id="contactform" action="//formspree.io/info@CollectivePeak capital.com" method="POST">
-               <input type="text" name="name" placeholder="Your Name">
-               <input type="email" name="_replyto" placeholder="Your Email">
-               <textarea name="message" placeholder="Your Message"></textarea>
-               <input type="submit" value="Send">
-            </form>
-            <div id="message-warning"></div>
-            <div id="message-success">
-               Your message was sent, thank you!<br>
-            </div>
-         </div>
-      </div>
-   </section>
+  <footer>
+    <p>&copy; 2025 CollectivePeak Capital. All rights reserved.</p>
+  </footer>
 </body>
 </html>

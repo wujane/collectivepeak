@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team | Collective Peak Capital</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a1a1a;
+      --secondary: #555555;
+      --accent: #0077cc;
+      --light: #f9f9f9;
+    }
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--primary);
+      line-height: 1.6;
+      background: var(--light);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    .logo img {
+      max-height: 60px;
+      display: block;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      font-weight: 600;
+    }
+    main {
+      padding-top: 80px; /* offset for fixed header */
+    }
+    section {
+      padding: 6rem 1rem;
+      scroll-margin-top: 80px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--primary);
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .card h3 {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    .card p {
+      color: var(--secondary);
+    }
+    .team-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+    footer {
+      background: var(--primary);
+      color: #ffffff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="images/newlogo.jpg" alt="Collective Peak Capital Logo" /></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#criteria">Criteria</a></li>
+        <li><a href="index.html#offer">Offer</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <!-- Note: no “Team” link here, so this page is unlinked -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="team">
+      <div class="container">
+        <h2 class="section-title">Our Team</h2>
+        <div class="grid-3">
+          <div class="card">
+            <img src="joseph.jpg" alt="Jessica Jensen" class="team-photo" />
+            <h3>Joseph Jensen</h3>
+            <p>Joseph brings deep expertise in investment analysis and strategic planning to every engagement. He partners closely with founders and management teams to uncover opportunities, conduct thorough due diligence, and build tailored growth roadmaps. With a collaborative approach and strong financial modeling background, Joseph helps businesses navigate complex transactions and deliver lasting value.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Collective Peak Capital. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
